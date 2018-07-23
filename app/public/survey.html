@@ -156,42 +156,51 @@
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
+        <h2>Your New Friend Is...</h2>
         <p class="modalText" id="resultName"></p>
-        <img class="modalText" id="resultImage">
+        <div class="modalText" id="resultImage"></div>
       </div>
     </div>
   </div>
 
     <script type="text/javascript">
-    var friendsResponse = false;
+    
+    function runTableQuery() {
+
+      var currentURL = window.location.origin;
+
+        $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+        .then(function(friends) {
+    
+          for (var i = 0; i < friends.length; i++) {
+              $("#resultName").text("Name: " + friends[0].name);
+              $("#resultImage").html("<img href:'" + friends[0].photo + "'>");
+            }
+        });
+    }
 
     function openmodal() {
         var modal = document.getElementById('myModal');
-
         var btn = document.getElementById("submitButton");
-
         var span = document.getElementsByClassName("close")[0];
 
         btn.onclick = function() {
             modal.style.display = "block";
         }
-
         span.onclick = function() {
             modal.style.display = "none";
         }
-
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         } 
-        }
+        runTableQuery();
+    }
        
-
       $("#submitButton").on("click", function(event) {
         event.preventDefault();
-        
-
+    
         friendsResponse = {
           name: $("#nameInput").val().trim(),
           photo: $("#pictureLink").val().trim(),
@@ -211,11 +220,10 @@
         openmodal();
         
 
-        // $.post("/api/friends", friendsResponse, function(data) { 
+        $.post("/api/friends", friendsResponse, function(data) { 
           
+        })
 
-          
-        // })
       });
   
   </script>

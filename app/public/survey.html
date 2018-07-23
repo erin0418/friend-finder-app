@@ -151,15 +151,48 @@
         </div>
         <button type="submit" class="btn btn-primary mb-2" id="submitButton">Find Your Friend</button>
       </form>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="modalText" id="resultName"></p>
+        <img class="modalText" id="resultImage">
+      </div>
+    </div>
+  </div>
 
     <script type="text/javascript">
-    // var express = require("express");
+    var friendsResponse = false;
+
+    function openmodal() {
+        var modal = document.getElementById('myModal');
+
+        var btn = document.getElementById("submitButton");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        } 
+        }
+       
 
       $("#submitButton").on("click", function(event) {
         event.preventDefault();
-        alert("Your friend match is being calculated.")
-  
-        var friendsResponse = {
+        
+
+        friendsResponse = {
           name: $("#nameInput").val().trim(),
           photo: $("#pictureLink").val().trim(),
           scores: [
@@ -175,9 +208,14 @@
             $("#question10").val(),
           ]
         };
-        $.post("/api/friends", friendsResponse, function(data) { 
-           
-        })
+        openmodal();
+        
+
+        // $.post("/api/friends", friendsResponse, function(data) { 
+          
+
+          
+        // })
       });
   
   </script>

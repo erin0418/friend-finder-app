@@ -1,7 +1,7 @@
 var friendsArray = [
 {
   "name":"Mikey",
-  "photo":"https://cdn7.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/87211/88319/Michelangelo_Teenage_Mutant_Ninja_Turtles_Cardboard_Cutout_Nickelodeon_buy_now_at_starstills__60625.1419957841.jpg?c=2?imbypass=on",
+  "photo":"https://i.pinimg.com/564x/f3/13/f4/f313f4adb6eb1c003f3375d4fe690f29.jpg",
   "scores":[
       5,
       1,

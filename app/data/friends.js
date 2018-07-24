@@ -1,7 +1,7 @@
 var friendsArray = [
 {
   "name":"Mikey",
-  "photo":"https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjZjNPPoLbcAhXumeAKHZu1Dw8QjRx6BAgBEAU&url=http%3A%2F%2Fwww.time2draw.com%2Fmanual%2Fhow-to-draw-a-teenage-mutant-ninja-turtles-step-by-step%2F&psig=AOvVaw3aSLFQ3gF-MQdj4jN9_GgQ&ust=1532470764803642",
+  "photo":"https://cdn7.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/87211/88319/Michelangelo_Teenage_Mutant_Ninja_Turtles_Cardboard_Cutout_Nickelodeon_buy_now_at_starstills__60625.1419957841.jpg?c=2?imbypass=on",
   "scores":[
       5,
       1,

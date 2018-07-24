@@ -14,7 +14,23 @@ var friendsArray = [
       4,
       1
     ]
-}
+},
+{
+    "name":"Donnie",
+    "photo":"https://static.comicvine.com/uploads/original/4/49448/5635228-donatello+2.jpg",
+    "scores":[
+        3,
+        2,
+        4,
+        1,
+        3,
+        1,
+        5,
+        2,
+        3,
+        2
+      ]
+  }
 ]
 
 module.exports = friendsArray;
